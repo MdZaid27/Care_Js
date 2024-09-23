@@ -146,62 +146,66 @@ export default function Header() {
       ),
       text: (
         <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="after:hidden">
-                <h3>
-                  {" "}
-                  Specialities & <br />
-                  Treatments
-                </h3>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <NavigationMenuLink>
-                  <div>
-                    <aside>
-                      <h3>Center of Excellence</h3>
-                      <ul>
-                        <li>Cardiac Sciences</li>
-                        <li>Gastro Sciences</li>
-                        <li>Nephrology</li>
-                        <li>Neurology</li>
-                      </ul>
-                    </aside>
-                    <aside>
-                      <h3>Specialties</h3>
-                      <ul>
-                        <li>Cardiology</li>
-                        <li>Cardiac Surgery</li>
-                        <li>Dermatology</li>
-                      </ul>
-                    </aside>
-                    <aside>
-                      <h3>Treatments and Procedures</h3>
-                      <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    </aside>
-                  </div>
-                </NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-        // <Dropdown title="Specialities & Treatments">
-        //   <ul>
-        //     <li>
-        //       <Link href="/cardiology">Cardiology</Link>
-        //     </li>
-        //     <li>
-        //       <Link href="/neurology">Neurology</Link>
-        //     </li>
-        //     <li>
-        //       <Link href="/orthopedics">Orthopedics</Link>
-        //     </li>
-        //   </ul>
-        // </Dropdown>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger className="after:hidden">
+        <h3>Specialities & <br /> Treatments</h3>
+      </NavigationMenuTrigger>
+      <NavigationMenuContent className="bg-teal-500 p-6">
+        <NavigationMenuLink>
+          <div className="flex px-4 py-10"> 
+            <aside className="flex-none mr-8"> 
+              <h3 className="text-white mb-2 flex flex-row border-b border-b-white text-xl font-normal w-full whitespace-nowrap">Center of Excellence</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1">Cardiac Sciences</li>
+                <li className="mb-1">Gastro Sciences</li>
+                <li className="mb-1">Nephrology</li>
+                <li className="mb-1">Neurology</li>
+              </ul>
+            </aside>
+            <aside className="overflow-y-auto max-h-48 flex-none mr-8"> {/* Increased margin-right */}
+              <h3 className="text-white mb-2 flex flex-row border-b border-b-white text-xl font-normal w-full whitespace-nowrap">Specialties</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1 whitespace-nowrap">Cardiology</li>
+                <li className="mb-1 whitespace-nowrap">Cardiac Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Dermatology</li>
+                <li className="mb-1 whitespace-nowrap">Dentistry</li>
+                <li className="mb-1 whitespace-nowrap">Emergency Medicine</li>
+                <li className="mb-1 whitespace-nowrap">Endocrinology</li>
+                <li className="mb-1 whitespace-nowrap">General Medicine/Internal Medicine</li>
+                <li className="mb-1 whitespace-nowrap">General Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Haematology</li>
+                <li className="mb-1 whitespace-nowrap">Interventional Radiology</li>
+                <li className="mb-1 whitespace-nowrap">Lab Medicine</li>
+              </ul>
+            </aside>
+            <aside className="overflow-y-auto max-h-48 flex-none"> 
+              <h3 className="text-white mb-2 flex flex-row border-b border-b-white text-xl font-normal w-full whitespace-nowrap">Treatments and Procedures</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1 whitespace-nowrap">2D/3D ECHO</li>
+                <li className="mb-1 whitespace-nowrap">Abdominal Aortic Aneurysm</li>
+                <li className="mb-1 whitespace-nowrap">Anal Cancer</li>
+                <li className="mb-1 whitespace-nowrap">Adult Liver Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Asthma</li>
+                <li className="mb-1 whitespace-nowrap">Back Pain</li>
+                <li className="mb-1 whitespace-nowrap">Bariatric Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Beating Heart Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Bladder Cancer</li>
+                <li className="mb-1 whitespace-nowrap">Bone Marrow Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Cardiovascular Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Chemotherapy</li>
+                <li className="mb-1 whitespace-nowrap">Deep Brain Stimulation</li>
+                <li className="mb-1 whitespace-nowrap">Dialysis</li>
+                <li className="mb-1 whitespace-nowrap">Endoscopy</li>
+              </ul>
+            </aside>
+          </div>
+        </NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+
       ),
       href: "#",
     },
@@ -210,19 +214,66 @@ export default function Header() {
         <FaHospital className="transition-transform duration-300 hover:scale-125" />
       ),
       text: (
-        <Dropdown title="Hospitals & Directions">
-          <ul>
-            <li>
-              <Link href="/hospital-1">Hospital 1</Link>
-            </li>
-            <li>
-              <Link href="/hospital-2">Hospital 2</Link>
-            </li>
-            <li>
-              <Link href="/hospital-3">Hospital 3</Link>
-            </li>
-          </ul>
-        </Dropdown>
+        <NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger className="after:hidden">
+        <h3>Hospitals& <br /> Directions</h3>
+      </NavigationMenuTrigger>
+      <NavigationMenuContent className="bg-teal-500 p-6">
+        <NavigationMenuLink>
+          <div className="flex px-4 py-10"> 
+            <aside className="flex-none mr-8"> 
+              <h3 className="text-white mb-2 flex flex-row text-xl font-normal w-full whitespace-nowrap">Hyderabad</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1">Care Hospitals, Banjara Hills</li>
+                <li className="mb-1">Care Hospitals, HITEC City</li>
+                <li className="mb-1">Care Hospitals, Nampally</li>
+                <li className="mb-1">Neurology</li>
+              </ul>
+            </aside>
+            <aside className="overflow-y-auto max-h-48 flex-none mr-8"> {/* Increased margin-right */}
+              <h3 className="text-white mb-2 flex flex-row border-b border-b-white text-xl font-normal w-full whitespace-nowrap">Specialties</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1 whitespace-nowrap">Cardiology</li>
+                <li className="mb-1 whitespace-nowrap">Cardiac Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Dermatology</li>
+                <li className="mb-1 whitespace-nowrap">Dentistry</li>
+                <li className="mb-1 whitespace-nowrap">Emergency Medicine</li>
+                <li className="mb-1 whitespace-nowrap">Endocrinology</li>
+                <li className="mb-1 whitespace-nowrap">General Medicine/Internal Medicine</li>
+                <li className="mb-1 whitespace-nowrap">General Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Haematology</li>
+                <li className="mb-1 whitespace-nowrap">Interventional Radiology</li>
+                <li className="mb-1 whitespace-nowrap">Lab Medicine</li>
+              </ul>
+            </aside>
+            <aside className="overflow-y-auto max-h-48 flex-none"> 
+              <h3 className="text-white mb-2 flex flex-row border-b border-b-white text-xl font-normal w-full whitespace-nowrap">Treatments and Procedures</h3>
+              <ul className="list-none pl-0 text-white">
+                <li className="mb-1 whitespace-nowrap">2D/3D ECHO</li>
+                <li className="mb-1 whitespace-nowrap">Abdominal Aortic Aneurysm</li>
+                <li className="mb-1 whitespace-nowrap">Anal Cancer</li>
+                <li className="mb-1 whitespace-nowrap">Adult Liver Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Asthma</li>
+                <li className="mb-1 whitespace-nowrap">Back Pain</li>
+                <li className="mb-1 whitespace-nowrap">Bariatric Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Beating Heart Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Bladder Cancer</li>
+                <li className="mb-1 whitespace-nowrap">Bone Marrow Transplant</li>
+                <li className="mb-1 whitespace-nowrap">Cardiovascular Surgery</li>
+                <li className="mb-1 whitespace-nowrap">Chemotherapy</li>
+                <li className="mb-1 whitespace-nowrap">Deep Brain Stimulation</li>
+                <li className="mb-1 whitespace-nowrap">Dialysis</li>
+                <li className="mb-1 whitespace-nowrap">Endoscopy</li>
+              </ul>
+            </aside>
+          </div>
+        </NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
       ),
       href: "#",
     },
